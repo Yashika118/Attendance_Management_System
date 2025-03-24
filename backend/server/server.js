@@ -8,7 +8,7 @@ const app=express();
 const port=process.env.PORT || 5000;
 
 
-app.get("api/test-supabase",async(req,res)=>{
+app.get("/api/test-supabase",async(req,res)=>{
     try {
 
         const {data,error}=await supabase.from('test').select('*');
